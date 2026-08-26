@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://7i6yesncqpue"]
+
+[ext_resource type="Script" uid="uid://w8yluvgaa4xb" path="res://sport_gamemode_button.gd" id="1_6rpmo"]
+[ext_resource type="Script" uid="uid://elqv4vjorhjr" path="res://survival_gamemode_button.gd" id="2_r67jb"]
+
+[sub_resource type="Theme" id="Theme_lic5b"]
+
+[node name="Control" type="Control" unique_id=805913752]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=103762655]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 85.0
+offset_right = 876.0
+offset_bottom = 129.0
+theme_override_font_sizes/font_size = 31
+text = "Which Gamemode Do You Want to Play?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Label" unique_id=260800847]
+layout_mode = 0
+offset_left = 0.06951904
+offset_right = 599.89105
+offset_bottom = 43.47769
+theme = SubResource("Theme_lic5b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Label" unique_id=961736549]
+layout_mode = 0
+offset_left = 0.84988403
+offset_right = 601.5513
+offset_bottom = 43.251312
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Label" unique_id=895478843]
+layout_mode = 0
+offset_left = 0.84988403
+offset_right = 600.84985
+
+[node name="Sport Gamemode Button" type="Button" parent="." unique_id=834861095]
+layout_mode = 0
+offset_left = 335.49997
+offset_top = 263.4919
+offset_right = 816.5
+offset_bottom = 303.4919
+theme_override_font_sizes/font_size = 22
+text = "Sport - how many goals can you score in 2:30"
+script = ExtResource("1_6rpmo")
+
+[node name="Survival Gamemode Button" type="Button" parent="." unique_id=1031523068]
+layout_mode = 0
+offset_left = 281.5
+offset_top = 336.11435
+offset_right = 870.5
+offset_bottom = 376.11438
+theme_override_font_sizes/font_size = 22
+text = "Survival - How many waves of enemies can you sruvive"
+script = ExtResource("2_r67jb")
+
+[connection signal="pressed" from="Sport Gamemode Button" to="Sport Gamemode Button" method="_on_pressed"]
+[connection signal="pressed" from="Survival Gamemode Button" to="Sport Gamemode Button" method="_on_survival_gamemode_button_pressed"]

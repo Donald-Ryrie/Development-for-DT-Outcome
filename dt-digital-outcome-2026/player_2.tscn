@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://43se04k8mkvr"]
+
+[ext_resource type="Script" uid="uid://bnm2y7liephd7" path="res://player_2.gd" id="1_8xjnt"]
+[ext_resource type="Texture2D" uid="uid://b4kgl43ek2bw8" path="res://Untitled2-removebg-preview.png" id="1_wkcja"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wugdy"]
+radius = 46.0
+
+[node name="Player 2" type="CharacterBody2D" unique_id=2115776719]
+script = ExtResource("1_8xjnt")
+
+[node name="Untitled2RemovebgPreview" type="Sprite2D" parent="." unique_id=909097753]
+position = Vector2(-6, 39)
+texture = ExtResource("1_wkcja")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=56728356]
+shape = SubResource("CircleShape2D_wugdy")

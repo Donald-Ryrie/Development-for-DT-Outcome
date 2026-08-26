@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cn68kr0xp38nd"]
+
+[ext_resource type="Script" uid="uid://bhk50yjilfr5x" path="res://return_button_1.gd" id="1_u1yut"]
+
+[node name="Control" type="Control" unique_id=2099960319]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=716087481]
+layout_mode = 0
+offset_left = 187.50003
+offset_top = 231.55923
+offset_right = 964.5
+offset_bottom = 416.44077
+theme_override_font_sizes/font_size = 22
+text = "Player 1 Controls: Arrows to move, ,/< for light attack, ./> for heavy attack.
+
+Player 2 Comtrols: WASD for movement, T for light attack, Y for heavy attack."
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Label" unique_id=454325296]
+layout_mode = 0
+offset_left = -0.3344104
+offset_top = 0.23972191
+offset_right = 781.59924
+offset_bottom = 184.93474
+
+[node name="Panel" type="Panel" parent="Label/VBoxContainer" unique_id=427865943]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Label/VBoxContainer" unique_id=2040508231]
+layout_mode = 2
+
+[node name="Return Button 1" type="Button" parent="." unique_id=1458358058]
+layout_mode = 0
+offset_left = 474.5
+offset_top = 537.8488
+offset_right = 677.5
+offset_bottom = 577.8488
+theme_override_font_sizes/font_size = 21
+text = "Back to Main Menu"
+script = ExtResource("1_u1yut")
+
+[node name="Label2" type="Label" parent="." unique_id=1932288060]
+layout_mode = 0
+offset_left = 438.87616
+offset_top = 48.655823
+offset_right = 713.1238
+offset_bottom = 154.82513
+theme_override_font_sizes/font_size = 32
+text = "Controls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Return Button 1" to="Return Button 1" method="_on_pressed"]

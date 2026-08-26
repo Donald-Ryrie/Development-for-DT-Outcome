@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://b80wkwf8hnd60"]
+
+[ext_resource type="Script" uid="uid://8vi8aymnenkn" path="res://button.gd" id="1_um0eb"]
+[ext_resource type="Script" uid="uid://hxdl7dsjnu61" path="res://button_2.gd" id="2_mv8rr"]
+[ext_resource type="Script" uid="uid://ceh3nn2m58a2g" path="res://button_3.gd" id="3_nkstl"]
+
+[sub_resource type="Theme" id="Theme_wugdy"]
+
+[node name="Control" type="Control" unique_id=909990734]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=1230828049]
+layout_mode = 0
+offset_left = 340.6502
+offset_top = 81.39396
+offset_right = 711.3496
+offset_bottom = 185.60785
+scale = Vector2(1.3414164, 1.3414164)
+theme = SubResource("Theme_wugdy")
+theme_type_variation = &"HeaderLarge"
+text = "Name of the Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Label" unique_id=1071717927]
+layout_mode = 0
+offset_left = -1.8278925
+offset_top = 0.7581226
+offset_right = 370.6994
+offset_bottom = 104.213905
+
+[node name="Panel" type="Panel" parent="Label/VBoxContainer" unique_id=1281850577]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Label/VBoxContainer" unique_id=1300067451]
+custom_minimum_size = Vector2(220, 60)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=31918457]
+layout_mode = 0
+offset_left = 134.52486
+offset_top = 526.90765
+offset_right = 258.52484
+offset_bottom = 592.0
+theme_override_font_sizes/font_size = 22
+text = "Controls"
+script = ExtResource("1_um0eb")
+
+[node name="Button2" type="Button" parent="." unique_id=2126792797]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 526.9058
+offset_right = 637.00006
+offset_bottom = 591.99817
+theme_override_font_sizes/font_size = 22
+text = "Play"
+script = ExtResource("2_mv8rr")
+
+[node name="Button3" type="Button" parent="." unique_id=107690640]
+layout_mode = 0
+offset_left = 918.68677
+offset_top = 526.9058
+offset_right = 1041.8959
+offset_bottom = 592.00006
+theme_override_font_sizes/font_size = 22
+text = "Credits"
+script = ExtResource("3_nkstl")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]

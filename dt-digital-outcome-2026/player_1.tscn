@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cvfejquxsbsv6"]
+
+[ext_resource type="Texture2D" uid="uid://dq4856vg25dqj" path="res://Untitled-removebg-preview.png" id="1_squ5q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b507a"]
+radius = 44.28318
+
+[node name="Player 1" type="CharacterBody2D" unique_id=1690450353]
+
+[node name="Player Character" type="Sprite2D" parent="." unique_id=1092603114]
+position = Vector2(2, 33.999996)
+rotation = 0.00046616048
+texture = ExtResource("1_squ5q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1648209378]
+shape = SubResource("CircleShape2D_b507a")
